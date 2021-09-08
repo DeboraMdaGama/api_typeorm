@@ -9,7 +9,6 @@ class CreateTagService {
       throw new Error("Incorrect name!");
     }
 
-    // SELECT * FROM TAGS WHERE NAME = 'name'
     const tagAlreadyExists = await tagsRepositories.findOne({
       name,
     });
