@@ -28,7 +28,7 @@ class Product {
     user_id:string;
 
     @JoinColumn({name:"user_id"})
-    @ManyToOne(()=>User)
+    @ManyToOne(type=> User, {eager:true})
     userId: User;
     
     @Column()
